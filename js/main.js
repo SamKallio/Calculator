@@ -69,8 +69,7 @@ function isOperator(v) {
     v === "/" ||
     v === "*" ||
     v === "%" ||
-    v === "." ||
-    v === "="
+    v === "."
   )
     return true;
 
