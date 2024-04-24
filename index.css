@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #1ab550;
+  --text-color: #fefefe;
+  --secondary-color: #258246;
+  --border-color: rgba(0, 0, 0, 0.6);
+  --border-shadow: rgba(0, 0, 0, 0.25);
+  --hover-color: rgba(255, 255, 255, 0.85);
+  --font-size: 16px;
+}
+
+body {
+  background-color: rgb(98, 98, 98);
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 10%;
+}
+
+#calc-content,
+#history {
+  background-color: var(--secondary-color);
+  border-radius: 4px 4px 4px 4px;
+  border: 1px solid var(--border-color);
+  box-shadow: 1px 2px 2px var(--border-shadow);
+  margin: auto;
+  text-align: center;
+  width: 240px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+#history {
+  justify-content: flex-start;
+}
+
+#input-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  width: 95%;
+  margin: auto;
+}
+
+#output-container {
+  background-color: var(--text-color);
+  box-shadow: 1px 2px 2px var(--border-shadow);
+  border: 1px solid black;
+  width: 90%;
+  margin: auto;
+  border-radius: 8px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: end;
+  padding: 4px 10px 4px 4px;
+}
+
+#input-field {
+  font-size: var(--font-size);
+}
+
+.inputBtn {
+  border: 1px solid var(--border-color);
+  background-color: var(--primary-color);
+  box-shadow: 1px 2px 2px var(--border-shadow);
+  border-radius: 8px;
+  flex-basis: 30%;
+}
+
+#clearBtn {
+  border: 1px solid black;
+  background-color: rgb(237, 229, 20);
+  box-shadow: 1px 2px 2px var(--border-shadow);
+  border-radius: 4px;
+}
+
+h2,
+.inputBtn,
+.historyPara,
+#footer {
+  color: var(--text-color);
+  text-shadow: 1px 2px 2px var(--border-color);
+  font-size: var(--font-size);
+}
+
+.historyPara {
+  padding: 0px;
+  margin: 1px;
+}
+
+.redText {
+  color: rgb(255, 255, 0) !important;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#footer {
+  padding: 10px;
+  text-align: center;
+}
+
+.inputBtn:hover,
+#clearBtn:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+.inputBtn:active,
+#clearBtn:active {
+  animation: buttonPress 0.5s linear;
+}
+
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    background-color: var(--hover-color);
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #content {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
