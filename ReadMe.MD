@@ -1,11 +1,11 @@
 # Calculator
 
-Very simple calculator made with JS, CSS and HTML. Contains the basic functionality of a calculator. You can sum, substract, multiply, divide and use modulo operator to calculate either decimal or integer numbers.
+Functional and simple calculator made with JS, CSS and HTML. Contains all basic functionality of a calculator. You can sum, substract, multiply, divide, use modulo operator and add brackets to calculate either decimal or integer numbers.
 
-Evaluation of calculation is done using MathJS library.
+Evaluation of expressions is done using MathJS library.
 
-The Purpose of this little project was to just practice evaluating user input and numbers. More whether this calculation is valid or not and that the user experience is nice enough.
+The Purpose of this little project was to just practice evaluating user input so that it can be evaluated mathematically.
 
 ## Known issues / TODO
 
-- User cannot change the calculation if he makes a typo (Wrong operator or number for example)
+- Expression errors are not descriptive of each error scenario (Basically you need to know math in order to know what was the error)
