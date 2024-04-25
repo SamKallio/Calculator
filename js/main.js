@@ -105,7 +105,7 @@ function addInput(event) {
         p.innerText = "History full! Please clear!";
         p.classList.add("redText");
 
-        //Evaluate the expression sent by user. Can return error if given an invalid expression.
+        //Evaluate the expression sent by the User. Can return error if given an invalid expression.
       } else {
         const calculation = currentCalc;
 
