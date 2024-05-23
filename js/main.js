@@ -56,7 +56,6 @@ function addInput(event) {
     inputField.textContent = currentCalc;
     return;
   }
-
   //If first character is not a valid first character, return early
   if (currentCalc === "" && !allowedFirstChars.includes(charValue)) return;
 
@@ -66,7 +65,6 @@ function addInput(event) {
     (charValue === ")" && braceRight >= braceLeft)
   )
     return;
-
   //Count braces
   if (charValue === "(") braceLeft += 1;
   if (charValue === ")") braceRight += 1;
@@ -132,6 +130,8 @@ function addInput(event) {
         braceRight = 0;
 
         p.innerHTML += calculation + " = " + currentCalc;
+        currentCalc = "";
+        pointUsed = false;
       }
 
       p.classList.add("historyPara");
